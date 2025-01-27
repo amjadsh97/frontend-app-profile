@@ -15,7 +15,8 @@
     "snapshot": "fedx-scripts jest --updateSnapshot",
     "start": "fedx-scripts webpack-dev-server --progress",
     "test": "TZ=UTC fedx-scripts jest --coverage --passWithNoTests",
-    "stubs": "pact-stub-service ./src/pacts/frontend-app-profile-edx-platform.json --port 18000"
+    "stubs": "pact-stub-service ./src/pacts/frontend-app-profile-edx-platform.json --port 18000",
+    "prepare": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/openedx/frontend-app-profile/issues"
@@ -28,7 +29,7 @@
     "extends @edx/browserslist-config"
   ],
   "dependencies": {
-    "@amjadsh97/brand-openedx": "^1.0.8",
+    "brand-openedx-zeit": "git+https://github.com/zeit-labs/brand-openedx.git",
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/frontend-component-header": "5.3.1",
     "@edx/frontend-platform": "7.1.4",
